@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{9fdfeefa-ba74-4e2b-8652-5c07fb2e52ca}</ProjectGuid>
+    <RootNamespace>Template</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)build\</OutDir>
+    <IntDir>.\build\intermediates\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <VcpkgUseStatic>true</VcpkgUseStatic>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;TEMPLATE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;TEMPLATE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;TEMPLATE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;TEMPLATE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ext\il2cppresolver\Cache.cpp" />
+    <ClCompile Include="ext\il2cppresolver\Data.cpp" />
+    <ClCompile Include="ext\il2cppresolver\Functions\Callback.cpp" />
+    <ClCompile Include="ext\il2cppresolver\Functions\Class.cpp" />
+    <ClCompile Include="ext\il2cppresolver\Functions\String.cpp" />
+    <ClCompile Include="ext\il2cppresolver\Functions\Thread.cpp" />
+    <ClCompile Include="ext\il2cppresolver\Il2CppResolver.cpp" />
+    <ClCompile Include="ext\il2cppresolver\Unity\API\Camera.cpp" />
+    <ClCompile Include="ext\il2cppresolver\Unity\API\Component.cpp" />
+    <ClCompile Include="ext\il2cppresolver\Unity\API\GameObject.cpp" />
+    <ClCompile Include="ext\il2cppresolver\Unity\API\LayerMask.cpp" />
+    <ClCompile Include="ext\il2cppresolver\Unity\API\Object.cpp" />
+    <ClCompile Include="ext\il2cppresolver\Unity\API\Rigidbody.cpp" />
+    <ClCompile Include="ext\il2cppresolver\Unity\API\Transform.cpp" />
+    <ClCompile Include="ext\il2cppresolver\Unity\API\_TEMPLATE_API.cpp" />
+    <ClCompile Include="ext\il2cppresolver\Unity\Obfuscators.cpp" />
+    <ClCompile Include="ext\il2cppresolver\Utils\Helper.cpp" />
+    <ClCompile Include="ext\imgui\imgui.cpp" />
+    <ClCompile Include="ext\imgui\imgui_demo.cpp" />
+    <ClCompile Include="ext\imgui\imgui_draw.cpp" />
+    <ClCompile Include="ext\imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="ext\imgui\imgui_tables.cpp" />
+    <ClCompile Include="ext\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="ext\kiero\kiero.cpp" />
+    <ClCompile Include="hdr\globals.hpp" />
+    <ClCompile Include="hdr\utils.hpp" />
+    <ClCompile Include="src\dllmain.cpp" />
+    <ClCompile Include="src\gui.cpp" />
+    <ClCompile Include="src\hax.cpp" />
+    <ClCompile Include="src\hook.cpp" />
+    <ClCompile Include="src\utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ext\il2cppresolver\Cache.hpp" />
+    <ClInclude Include="ext\il2cppresolver\Data.hpp" />
+    <ClInclude Include="ext\il2cppresolver\Defines.hpp" />
+    <ClInclude Include="ext\il2cppresolver\Functions\Callback.hpp" />
+    <ClInclude Include="ext\il2cppresolver\Functions\Class.hpp" />
+    <ClInclude Include="ext\il2cppresolver\Functions\Domain.hpp" />
+    <ClInclude Include="ext\il2cppresolver\Functions\ResolveCall.hpp" />
+    <ClInclude Include="ext\il2cppresolver\Functions\String.hpp" />
+    <ClInclude Include="ext\il2cppresolver\Functions\Thread.hpp" />
+    <ClInclude Include="ext\il2cppresolver\Includes.hpp" />
+    <ClInclude Include="ext\il2cppresolver\Il2CppResolver.hpp" />
+    <ClInclude Include="ext\il2cppresolver\Unity\API\Camera.hpp" />
+    <ClInclude Include="ext\il2cppresolver\Unity\API\Component.hpp" />
+    <ClInclude Include="ext\il2cppresolver\Unity\API\GameObject.hpp" />
+    <ClInclude Include="ext\il2cppresolver\Unity\API\LayerMask.hpp" />
+    <ClInclude Include="ext\il2cppresolver\Unity\API\Object.hpp" />
+    <ClInclude Include="ext\il2cppresolver\Unity\API\Rigidbody.hpp" />
+    <ClInclude Include="ext\il2cppresolver\Unity\API\Transform.hpp" />
+    <ClInclude Include="ext\il2cppresolver\Unity\API\_TEMPLATE_API.hpp" />
+    <ClInclude Include="ext\il2cppresolver\Unity\Defines.hpp" />
+    <ClInclude Include="ext\il2cppresolver\Unity\Includes.hpp" />
+    <ClInclude Include="ext\il2cppresolver\Unity\Obfuscators.hpp" />
+    <ClInclude Include="ext\il2cppresolver\Unity\Structures\Engine.hpp" />
+    <ClInclude Include="ext\il2cppresolver\Unity\Structures\il2cpp.hpp" />
+    <ClInclude Include="ext\il2cppresolver\Unity\Structures\il2cppArray.hpp" />
+    <ClInclude Include="ext\il2cppresolver\Unity\Structures\il2cppDictionary.hpp" />
+    <ClInclude Include="ext\il2cppresolver\Unity\Structures\Includes.hpp" />
+    <ClInclude Include="ext\il2cppresolver\Unity\Structures\System_String.hpp" />
+    <ClInclude Include="ext\il2cppresolver\Utils\Helper.hpp" />
+    <ClInclude Include="ext\il2cppresolver\Utils\Joaat.hpp" />
+    <ClInclude Include="ext\il2cppresolver\Utils\VFunc.hpp" />
+    <ClInclude Include="ext\imgui\imconfig.h" />
+    <ClInclude Include="ext\imgui\imgui.h" />
+    <ClInclude Include="ext\imgui\imgui_impl_win32.h" />
+    <ClInclude Include="ext\imgui\imgui_internal.h" />
+    <ClInclude Include="ext\imgui\imstb_rectpack.h" />
+    <ClInclude Include="ext\imgui\imstb_textedit.h" />
+    <ClInclude Include="ext\imgui\imstb_truetype.h" />
+    <ClInclude Include="ext\kiero\kiero.h" />
+    <ClInclude Include="hdr\config.hpp" />
+    <ClInclude Include="hdr\gui.hpp" />
+    <ClInclude Include="hdr\hax.hpp" />
+    <ClInclude Include="hdr\hook.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\.gitignore" />
+    <None Include="..\README.md" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
