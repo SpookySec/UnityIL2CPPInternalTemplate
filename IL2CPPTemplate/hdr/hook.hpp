@@ -27,6 +27,7 @@ namespace Hooks
     public:
         std::vector<Hook*> gHooks;
         bool Add(std::string _name, uintptr_t _fAddress, uintptr_t _hkAddress, uintptr_t _oAddress);
+        bool Del(Hooks::Hook* hook);
         Hook* Search(char* name);
         bool EnableByName(char* name);
         bool DisableByName(char* name);

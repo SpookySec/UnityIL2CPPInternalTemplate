@@ -33,7 +33,7 @@ namespace Hooks
     bool Hook::Enable() {
         if (!enabled)
             return MH_EnableHook(PTRCAST(LPVOID, fAddress)) == MH_OK;
-        
+
         return false;
     }
 
@@ -53,6 +53,17 @@ namespace Hooks
 
         gHooks.push_back(&hook);
         return true;
+    }
+
+    bool HooksManager::Del(Hooks::Hook* hook)
+    {
+        if (!hook->created)
+            return false;
+
+        if (hook->enabled)
+            hook->Disable();
+
+        return MH_RemoveHook(PTRCAST(LPVOID, hook->hkAddress)) == MH_OK;
     }
 
     Hook* HooksManager::Search(char* name)
