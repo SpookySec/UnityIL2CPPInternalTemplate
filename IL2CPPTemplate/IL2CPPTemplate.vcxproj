@@ -196,6 +196,11 @@
     <ClCompile Include="ext\imgui\imgui_tables.cpp" />
     <ClCompile Include="ext\imgui\imgui_widgets.cpp" />
     <ClCompile Include="ext\kiero\kiero.cpp" />
+    <ClCompile Include="ext\kiero\minhook\src\buffer.c" />
+    <ClCompile Include="ext\kiero\minhook\src\hde\hde32.c" />
+    <ClCompile Include="ext\kiero\minhook\src\hde\hde64.c" />
+    <ClCompile Include="ext\kiero\minhook\src\hook.c" />
+    <ClCompile Include="ext\kiero\minhook\src\trampoline.c" />
     <ClCompile Include="hdr\globals.hpp" />
     <ClCompile Include="hdr\utils.hpp" />
     <ClCompile Include="src\dllmain.cpp" />
@@ -244,14 +249,25 @@
     <ClInclude Include="ext\imgui\imstb_textedit.h" />
     <ClInclude Include="ext\imgui\imstb_truetype.h" />
     <ClInclude Include="ext\kiero\kiero.h" />
+    <ClInclude Include="ext\kiero\minhook\dll_resources\resource.h" />
+    <ClInclude Include="ext\kiero\minhook\include\MinHook.h" />
+    <ClInclude Include="ext\kiero\minhook\src\buffer.h" />
+    <ClInclude Include="ext\kiero\minhook\src\hde\hde32.h" />
+    <ClInclude Include="ext\kiero\minhook\src\hde\hde64.h" />
+    <ClInclude Include="ext\kiero\minhook\src\hde\pstdint.h" />
+    <ClInclude Include="ext\kiero\minhook\src\hde\table32.h" />
+    <ClInclude Include="ext\kiero\minhook\src\hde\table64.h" />
+    <ClInclude Include="ext\kiero\minhook\src\trampoline.h" />
     <ClInclude Include="hdr\config.hpp" />
     <ClInclude Include="hdr\gui.hpp" />
     <ClInclude Include="hdr\hax.hpp" />
     <ClInclude Include="hdr\hook.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\.gitignore" />
-    <None Include="..\README.md" />
+    <None Include="ext\kiero\minhook\dll_resources\MinHook.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ext\kiero\minhook\dll_resources\MinHook.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

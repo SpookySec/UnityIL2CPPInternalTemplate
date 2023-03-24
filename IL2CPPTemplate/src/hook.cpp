@@ -1,6 +1,4 @@
 #pragma once
-//#include "../hdr/hook.hpp"
-
 #include "../hdr/hook.hpp"
 
 namespace Hooks

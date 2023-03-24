@@ -10,4 +10,3 @@
 
 void InitMenu();
 void Menu(bool);
-void createButton(Hooks::Hook*, std::string, bool); //poopysec
